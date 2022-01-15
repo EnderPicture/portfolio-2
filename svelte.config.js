@@ -2,6 +2,7 @@ import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
+import { imagetools } from 'vite-imagetools';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -24,13 +25,18 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null,
-			precompress: false
+			precompress: true
 		}),
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 
 		vite: {
+			plugins: [
+				imagetools({
+					force: true
+				})
+			],
 			css: {
 				preprocessorOptions: {
 					scss: {
