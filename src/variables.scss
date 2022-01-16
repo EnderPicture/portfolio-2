@@ -1,1 +1,24 @@
 /* Variables and mixins declared here will be available in all other SCSS files */
+
+$width: 50rem;
+$wide-width: 70vw;
+$read-width: 30rem;
+$side-padding: 1rem;
+
+@mixin width {
+	width: 100%;
+	max-width: $width;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $side-padding;
+	padding-left: $side-padding;
+}
+@mixin read-width {
+	max-width: $read-width;
+	
+}
+@mixin wide-width {
+  width: $wide-width;
+  margin-left: min(calc(#{calc(($width - $side-padding * 2) / 2)} - #{calc($wide-width / 2)}), 0px);
+  min-width: 100%;
+}

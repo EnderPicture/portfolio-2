@@ -1,15 +1,42 @@
 <script lang="ts">
 	import '../app.scss';
-	import Logo1 from '$lib/images/favicon.png?w=100;500;1000&format=webp&srcset';
-	console.log(Logo1)
-	console.log(Logo1.split(/[0-9]+w(, )?/))
 </script>
 
-<nav>donny wu</nav>
-<slot />
+<nav>
+	<div class="nav width">
+		<p>DonnyWu</p>
+		<div class="spacer"></div>
+		<!-- <a href="/#contact">contact</a>
+		<a href="/#about">about</a>
+		<a href="/#projects">projects</a> -->
+	</div>
+</nav>
 
-<img srcset={Logo1} type="image/webp" alt="testattribute"/>
+<main>
+	<slot />
+</main>
+
+<footer>
+
+</footer>
 
 <style lang="scss">
+nav {
+	background-color: #000;
+	max-width: initial;
+}
+.nav {
+	display: flex;
+	padding: 0;
+	> * {
+		padding: .5rem $side-padding;
+	}
+}
 
+.spacer {
+	flex: 1;
+}
+p {
+	margin: 0;
+}
 </style>
