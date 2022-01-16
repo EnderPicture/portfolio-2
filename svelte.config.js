@@ -13,7 +13,7 @@ const config = {
 	preprocess: [
 		preprocess({
 			scss: {
-				prependData: '@use "src/variables.scss" as *;'
+				prependData: '@use "src/lib/styles/_variables.scss" as *;'
 			}
 		}),
 		mdsvex(mdsvexConfig)
@@ -40,7 +40,7 @@ const config = {
 			css: {
 				preprocessorOptions: {
 					scss: {
-						additionalData: '@use "src/variables.scss" as *;'
+						additionalData: '@use "src/lib/styles/_variables.scss" as *;'
 					}
 				}
 			}
