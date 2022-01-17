@@ -14,7 +14,7 @@
 
 <nav>
 	<div class="nav width">
-		<p>DonnyWu</p>
+		<a href="/">DonnyWu</a>
 		<div class="spacer" />
 		<!-- <a href="/#contact">contact</a>
 		<a href="/#about">about</a>

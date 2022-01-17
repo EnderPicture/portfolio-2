@@ -3,7 +3,7 @@
 $width: 50rem;
 $wide-width: 70vw;
 $read-width: 30rem;
-$side-padding: 1rem;
+$side-padding: 2rem;
 
 @mixin width {
 	width: 100%;
@@ -15,10 +15,9 @@ $side-padding: 1rem;
 }
 @mixin read-width {
 	max-width: $read-width;
-	
 }
 @mixin wide-width {
-  width: $wide-width;
-  margin-left: min(calc(#{calc(($width - $side-padding * 2) / 2)} - #{calc($wide-width / 2)}), 0px);
-  min-width: 100%;
+	width: $wide-width;
+	margin-left: min(calc(#{calc(($width - $side-padding * 2) / 2)} - #{calc($wide-width / 2)}), 0px);
+	min-width: 100%;
 }
