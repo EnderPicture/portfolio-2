@@ -1,15 +1,11 @@
 <script>
 	import { projects } from '$lib/store';
-	let posts = [];
-	let a = 'wow';
 </script>
 
-{#each $projects as post}
-	<a href={post.path}>
+{#each $projects as project}
+	<a href={project.path}>
 		<div>
-			{post.metadata.title}
+			{project.metadata.title}
 		</div>
 	</a>
 {/each}
-
-<p>testing {a}</p>
