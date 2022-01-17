@@ -1,25 +1,23 @@
 import { writable } from 'svelte/store';
 
-type project = {
+type Project = {
 	path: string;
 	metadata: {
 		title: string;
 	};
 };
 
-export const projects = writable<project[]>([]);
+export const projects = writable<Project[]>([]);
 
 export async function loadProjects() {
-	let posts: project[] = [];
+	let temp: Project[] = [];
 	const allProjects = import.meta.glob('/src/routes/projects/*.md');
 	for (let path in allProjects) {
 		const { metadata } = await allProjects[path]();
-		posts.push({
+		temp.push({
 			path: path.replace(/(\/src\/routes\/)|(\.md)/g, ''),
 			metadata: metadata
 		});
 	}
-	projects.set(posts);
+	projects.set(temp);
 }
-
-export const test = writable<string>('hello');
