@@ -1,3 +1,7 @@
+<script>
+	import ProjectList from '$lib/components/ProjectList.svelte';
+</script>
+
 <svelte:head>
 	<title>Donny's portfolio</title>
 </svelte:head>
@@ -18,10 +22,7 @@
 <section id="projects">
 	<h2>here are my projects</h2>
 	<div class="projects">
-		<article>test</article>
-		<article>test</article>
-		<article>test</article>
-		<article>test</article>
+		<ProjectList />
 	</div>
 	<section id="contact">
 		<h2>contact</h2>
