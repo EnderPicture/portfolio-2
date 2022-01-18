@@ -1,5 +1,6 @@
 ---
 title: 'Traveling at Home'
+cover: 'favicon.png'
 ---
 
 <script>

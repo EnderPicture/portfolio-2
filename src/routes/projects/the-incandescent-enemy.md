@@ -1,5 +1,7 @@
 ---
 title: 'The Incandescent Enemy'
+cover: 'the-incandescent-enemy.png'
+# cover: 'favicon.png'
 ---
 
 <script>

@@ -1,13 +1,3 @@
-<script context="module">
-	import { loadProjects } from '$lib/store';
-	export async function load() {
-		await loadProjects();
-		return {
-			status: 200
-		};
-	}
-</script>
-
 <script lang="ts">
 	import '$lib/styles/_global.scss';
 </script>
