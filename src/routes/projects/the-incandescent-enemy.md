@@ -1,14 +1,28 @@
 ---
 title: 'The Incandescent Enemy'
-cover: 'the-incandescent-enemy.png'
-# cover: 'favicon.png'
 ---
 
+<script context="module">
+  import img from '$lib/images/the-incandescent-enemy.png?w=300;500;750;1000&format=webp&srcset';
+  export const cover = img;
+
+  export function load() {
+    return {
+      props: {
+        cover: cover
+      }
+    }
+  }
+</script>
+
 <script>
+  export let cover;
   import YoutubeEmbed from '$lib/components/YoutubeEmbed.svelte';
 </script>
 
 # {title}
+
+<img srcset={cover}>
 
 ## What is this
 

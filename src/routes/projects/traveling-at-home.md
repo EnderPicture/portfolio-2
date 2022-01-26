@@ -1,7 +1,19 @@
 ---
 title: 'Traveling at Home'
-cover: 'favicon.png'
 ---
+
+<script context="module">
+  import img from '$lib/images/the-incandescent-enemy.png?w=300;500;750;1000&format=webp&srcset';
+  export const cover = img;
+
+  export function load() {
+    return {
+      props: {
+        cover: cover
+      }
+    }
+  }
+</script>
 
 <script>
   import YoutubeEmbed from '$lib/components/YoutubeEmbed.svelte';

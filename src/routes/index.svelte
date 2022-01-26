@@ -1,23 +1,18 @@
 <script lang="ts" context="module">
 	import type { Project } from '$lib/types';
 	import img from '/src/lib/images/favicon.png?w=100;500;1000&format=webp&srcset';
+	// import { metadata, thing } from './projects/the-incandescent-enemy.md';
+
+	// console.log(metadata);
+	// console.log(thing);
 
 	export async function load() {
 		let projects: Project[] = [];
 		const allProjects = import.meta.glob('/src/routes/projects/*.md');
 		for (let path in allProjects) {
-			const { metadata } = await allProjects[path]();
+			const { metadata, cover } = await allProjects[path]();
 
-			console.log(metadata.cover);
-
-			let ext = metadata.cover.split('.').pop();
-			let file = metadata.cover.replace('.' + ext, '');
-
-			const { default: importedSrcset } = await import(
-				`../lib/images/${file}.png?w=300;500;750;1000&format=webp&srcset`
-			);
-			let srcset = importedSrcset;
-			let src = srcset
+			let src = cover
 				.split(/ [0-9]+w,? ?/)
 				.filter((d) => d != '')
 				.reverse()[0];
@@ -25,7 +20,7 @@
 			projects.push({
 				cover: {
 					src: src,
-					srcset: srcset
+					srcset: cover
 				},
 				path: path.replace(/(\/src\/routes\/)|(\.md)/g, ''),
 				metadata: metadata

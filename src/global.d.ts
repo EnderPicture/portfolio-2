@@ -9,3 +9,5 @@ declare module '*&srcset' {
   const urlPath: string;
   export default urlPath;
 }
+
+declare module '*.md'

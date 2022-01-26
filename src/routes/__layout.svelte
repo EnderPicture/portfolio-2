@@ -32,7 +32,4 @@
 	.spacer {
 		flex: 1;
 	}
-	p {
-		margin: 0;
-	}
 </style>
