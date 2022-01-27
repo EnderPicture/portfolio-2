@@ -3,7 +3,7 @@ title: 'The Incandescent Enemy'
 ---
 
 <script context="module">
-  import img from '$lib/images/the-incandescent-enemy.png?w=300;500;750;1000&format=webp&srcset';
+  import img from "$lib/images/the-incandescent-enemy/the-incandescent-enemy.png?w=300;500;750;1000&format=webp&srcset";
   export const cover = img;
 
   export function load() {
@@ -17,12 +17,37 @@ title: 'The Incandescent Enemy'
 
 <script>
   export let cover;
-  import YoutubeEmbed from '$lib/components/YoutubeEmbed.svelte';
+  import YoutubeEmbed from "$lib/components/YoutubeEmbed.svelte";
+  import Image from "$lib/components/Image.svelte";
+  import Figures from "$lib/components/Figures.svelte";
+
+  import char1 from "$lib/images/the-incandescent-enemy/char-1.png?w=300;500;750;1000&format=webp&srcset";
+  import char2 from "$lib/images/the-incandescent-enemy/char-2.png?w=300;500;750;1000&format=webp&srcset";
+  import face1 from "$lib/images/the-incandescent-enemy/face-1.png?w=300;500;750;1000&format=webp&srcset";
+  import face2 from "$lib/images/the-incandescent-enemy/face-2.png?w=300;500;750;1000&format=webp&srcset";
+  import face3 from "$lib/images/the-incandescent-enemy/face-3.png?w=300;500;750;1000&format=webp&srcset";
+  import face4 from "$lib/images/the-incandescent-enemy/face-4.png?w=300;500;750;1000&format=webp&srcset";
+  import hdr1 from "$lib/images/the-incandescent-enemy/hdr-1.png?w=300;500;750;1000&format=webp&srcset";
+  import noise1 from "$lib/images/the-incandescent-enemy/noise-1.png?w=300;500;750;1000&format=webp&srcset";
+  import noise2 from "$lib/images/the-incandescent-enemy/noise-2.png?w=300;500;750;1000&format=webp&srcset";
+  import noise3 from "$lib/images/the-incandescent-enemy/noise-3.png?w=300;500;750;1000&format=webp&srcset";
+  import road1 from "$lib/images/the-incandescent-enemy/road-1.png?w=300;500;750;1000&format=webp&srcset";
+  import road2 from "$lib/images/the-incandescent-enemy/road-2.png?w=300;500;750;1000&format=webp&srcset";
+  import road3 from "$lib/images/the-incandescent-enemy/road-3.png?w=300;500;750;1000&format=webp&srcset";
+  import terrain1 from "$lib/images/the-incandescent-enemy/terrain-1.jpg?w=300;500;750;1000&format=webp&srcset";
+  import terrain2 from "$lib/images/the-incandescent-enemy/terrain-2.png?w=300;500;750;1000&format=webp&srcset";
+  import vegetation1 from "$lib/images/the-incandescent-enemy/vegetation-1.png?w=300;500;750;1000&format=webp&srcset";
+  import vegetation2 from "$lib/images/the-incandescent-enemy/vegetation-2.png?w=300;500;750;1000&format=webp&srcset";
+  import vw1 from "$lib/images/the-incandescent-enemy/vw-1.jpg?w=300;500;750;1000&format=webp&srcset";
+  import vw2 from "$lib/images/the-incandescent-enemy/vw-2.jpg?w=300;500;750;1000&format=webp&srcset";
+  import vw3 from "$lib/images/the-incandescent-enemy/vw-3.jpg?w=300;500;750;1000&format=webp&srcset";
+  import vwUv from "$lib/images/the-incandescent-enemy/vw-uv.jpg?w=300;500;750;1000&format=webp&srcset";
+
 </script>
 
-# {title}
+<Figures images={[{ srcset: cover, alt: 'thing' }]} wide={true}/>
 
-<img srcset={cover}>
+# {title}
 
 ## What is this
 
@@ -44,7 +69,7 @@ of 5, this animation was started and finished within a time frame of three-month
 
 ## Viewing
 
-<YoutubeEmbed code="_dXtt6MLA2A" />
+<YoutubeEmbed code="_dXtt6MLA2A" aspect="12/5"/>
 
 ## What did I do
 
@@ -56,16 +81,68 @@ With reference images, the classic VW bus was modelled with subdivision 3D model
 modified to fit the cartoon proportions. The VW bus uses a forward kinematics rig consists of 5
 hinged doors and 2 wheel axels. The style is an older rusted/beat up VW Bus.
 
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: vw1,
+      alt: '',
+      figCaption: ''
+    },
+    {
+      srcset: vw2,
+      alt: '',
+      figCaption: ''
+    },
+    {
+      srcset: vw3,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
+
+UV maps are then created with distinct shells for Substance Painter where modified materials are
+painted on based on the bounds of UV shells.
+
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: vwUv,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
+
 ### Created environment's model, UV, materials, and textures
 
 #### Terrain
 
-Terrain is created with the help of a NASA EarthData dataset named “ASTER Global Digital Elevation
-Model V003” of Death Valley California. Stitched together with 9 tiles and used as displacement map,
-it will show up as the result below. The terrain is then turned into a mesh for easier asset
-creation and reference since displacement only shows up upon render. With texture from Maptiler
-gathered and stitched together more than 500 tiles by a custom script, the terrain can be mapped
-with real RGB color with a max resolution of 32k \* 32k.
+The terrain is created with the help of a [NASA EarthData](https://earthdata.nasa.gov/) dataset
+named “ASTER Global Digital Elevation Model V003” of Death Valley California. Stitched together with
+9 tiles and used as a displacement map, it will show up as the result below. The terrain is then
+turned into a mesh for easier asset creation and reference since displacement only shows up upon
+render. With texture from [Maptiler](https://cloud.maptiler.com/) gathered and stitched together
+more than 500 tiles by a custom script, the terrain can be mapped with real RGB colour with a max
+resolution of 32k \* 32k.
+
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: terrain1,
+      alt: '',
+      figCaption: ''
+    },
+    {
+      srcset: terrain2,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
 
 A custom precaudal shader network is added on top of the texture for infinite resolution and extra
 details. This helps with the eventual use of 8k\*8k textures due to video memory constraints.
@@ -75,11 +152,48 @@ details. This helps with the eventual use of 8k\*8k textures due to video memory
 MASH networks are used to plot random clusters of vegetation and rocks to the desert to give depth
 with tracking shots.
 
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: vegetation1,
+      alt: '',
+      figCaption: ''
+    },
+    {
+      srcset: vegetation2,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
+
 #### Roads
 
-The roads use a custom shading network to create asphalt like bumps, paint bump maps, racks, mud,
+The roads use a custom shading network to create asphalt-like bumps, paint bump maps, racks, mud,
 and sand overlay. Road textures utilize stacked UV shells as they are extremely long and forever
 repeating except for the crosswalk section.
+
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: road1,
+      alt: '',
+      figCaption: ''
+    },
+    {
+      srcset: road2,
+      alt: '',
+      figCaption: ''
+    },
+    {
+      srcset: road3,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
 
 #### Created main character's model, UV, rig, materials, and textures
 
@@ -89,15 +203,48 @@ used the Human IK system in Maya to quickly create a functional humanoid rig. Sk
 carefully considered as this is a relatively large model to skin. After painting only the body,
 weights are transferred to hair and clothing with skin weight copy function.
 
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: char1,
+      alt: '',
+      figCaption: ''
+    },
+    {
+      srcset: char2,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
+
 #### Facial rig
 
 The face rig utilizes a set of mouth and eye lid movements which are divided by a utility blend
 shape where it cuts each blend shape by half. This technique doubles the amount of blend shapes and
 creates more possibilities for lip syncing and facial expressions.
 
-Screen shot in maya showcasing nested blendshapes Screen shot in maya showcasing all mouth movements
-Screen shot in maya showcasing visual face controller Screen shot in maya showcasing all blend shape
-models
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: face1,
+      alt: '',
+      figCaption: ''
+    },
+    {
+      srcset: face2,
+      alt: '',
+      figCaption: ''
+    },
+    {
+      srcset: face3,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
 
 ### Managed rendering + final image production
 
@@ -114,30 +261,47 @@ necessary variance filter support to complete denoising.
 
 Since our fast render times relied on getting a grainy image then denoising it, not having both of
 Arnold's built-in denoising option, Optix and NOICE, in GPU mode is a pain. To solve this, I
-researched and used Intel Open Image Denoise. The problem is that Intel's open image denoise does
-not support EXR images, only PFM. So, by using the HDR version of ImageMagick and a command-line
-script, denoising can happen despite Arnold GPU. AOVs were rendered but they did not help that much
-as they are also quite noisy.
+researched and used [Intel Open Image Denoise](https://www.openimagedenoise.org/). The problem is
+that Intel's open image denoise does not support EXR images, only PFM. So, by using the HDR version
+of [ImageMagick](https://imagemagick.org/index.php) and a command-line script, denoising can happen
+despite Arnold GPU. AOVs were rendered but they did not help that much as they are also quite noisy.
 
-An example of the noisy output image A screenshot of terminal running Open Image Denoise An example
-of the same frame but denoised by Open Image Denoise
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: noise1,
+      alt: 'An example of the noisy output image',
+      figCaption: 'noisy output image'
+    },
+    {
+      srcset: noise3,
+      alt: 'A screenshot of terminal running Open Image Denoise',
+      figCaption: 'terminal running Open Image Denoise'
+    },
+    {
+      srcset: noise2,
+      alt: 'An example of the same frame but denoised by Open Image Denoise',
+      figCaption: 'the same frame but denoised by Open Image Denoise'
+    },
+  ]}
+/>
 
 #### Image pipeline
 
 From Maya → EXR → PFM → EXR conversion, we still need a convenient video format to contain all the
-colour and dynamic range with little to no loss. We used DaVinci Resolve to convert EXR sequences to
-a Cineform YUV 10bit in the ARRI V3 LogC colour space, creating an easy to manage high dynamic range
-colour gradable video format.
+colour and dynamic range with little to no loss. We used
+[DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) to convert EXR
+sequences to a Cineform YUV 10bit in the ARRI V3 LogC colour space, creating an easy to manage high
+dynamic range colour gradable video format.
 
-A rendered frame showcasing the HDR denoising pipeline
+<Figures images={[ { srcset: hdr1, alt: '', figCaption: '' }]}/>
 
 ### Created Animations
 
-Intro title sequence
-
-Stop light change sequence
-
-Police strobe light sequence
+- Intro title sequence
+- Stop light change sequence
+- Police strobe light sequence
 
 ## Conclusion
 
@@ -150,10 +314,10 @@ should be more reinforced.
 
 ## Tools used
 
-- Autodesk Maya
-- Arnold GPU
-- Intel Open Image Denoise
-- ImageMagick
-- DaVinci Resolve
-- Substance Painter
-- Nasa Earthdata
+- [Autodesk Maya](https://www.autodesk.com/products/maya/overview)
+- [Arnold GPU](https://docs.arnoldrenderer.com/display/A5AFMUG/Getting+Started+with+Arnold+GPU)
+- [Intel Open Image Denoise](https://www.openimagedenoise.org/)
+- [ImageMagick](https://imagemagick.org/index.php)
+- [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/)
+- [Substance Painter](https://www.substance3d.com/products/substance-painter/)
+- [Nasa Earthdata](https://earthdata.nasa.gov/)

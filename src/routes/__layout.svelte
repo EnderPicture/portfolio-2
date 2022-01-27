@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '$lib/styles/_global.scss';
+	import { now } from 'svelte/internal';
 </script>
 
 <nav>
@@ -16,6 +17,10 @@
 	<slot />
 </main>
 
+<footer class="width">
+	<p>Copyright Donny Wu {new Date().getFullYear()}</p>
+</footer>
+
 <style lang="scss">
 	nav {
 		background-color: #000;
@@ -27,6 +32,7 @@
 		> * {
 			padding: 0.5rem $side-padding;
 		}
+		margin-bottom: 2rem;
 	}
 
 	.spacer {

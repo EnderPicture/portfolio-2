@@ -5,7 +5,7 @@ export type Project = {
 		srcset: string;
 	};
 	metadata: {
-		title: string;
-		cover: string;
+		title?: string;
+		description?: string;
 	};
 };

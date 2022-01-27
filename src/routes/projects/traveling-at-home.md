@@ -3,7 +3,7 @@ title: 'Traveling at Home'
 ---
 
 <script context="module">
-  import img from '$lib/images/the-incandescent-enemy.png?w=300;500;750;1000&format=webp&srcset';
+  import img from '$lib/images/the-incandescent-enemy/the-incandescent-enemy.png?w=300;500;750;1000&format=webp&srcset';
   export const cover = img;
 
   export function load() {

@@ -1,7 +1,11 @@
 <script lang="ts">
-	export let img : string;
-	let srcset = '';
-	let src = '';
+	export let srcset: string;
+	export let alt: string = '';
+
+	let src = srcset
+		.split(/ [0-9]+w,? ?/)
+		.filter((d) => d != '')
+		.reverse()[0];
 </script>
 
-<img {srcset} {src} type="image/webp" alt="testattribute" />
+<img {srcset} {src} {alt} type="image/webp" sizes="33vw" />

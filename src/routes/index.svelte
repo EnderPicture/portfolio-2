@@ -58,9 +58,7 @@
 </section>
 <section id="projects">
 	<h2>here are my projects</h2>
-	<div class="projects">
-		<ProjectList {projects} />
-	</div>
+	<ProjectList {projects} />
 	<section id="contact">
 		<h2>contact</h2>
 	</section>
@@ -69,10 +67,5 @@
 <style lang="scss">
 	p {
 		@include read-width;
-	}
-	.projects {
-		@include wide-width;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
 	}
 </style>
