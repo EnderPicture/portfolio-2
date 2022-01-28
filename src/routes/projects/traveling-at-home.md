@@ -3,7 +3,7 @@ title: 'Traveling at Home'
 ---
 
 <script context="module">
-  import img from '$lib/images/the-incandescent-enemy/the-incandescent-enemy.png?w=300;500;750;1000&format=webp&srcset';
+  import img from '$lib/images/traveling-at-home/cover.png?srcset';
   export const cover = img;
 
   export function load() {
@@ -17,9 +17,15 @@ title: 'Traveling at Home'
 
 <script>
   import YoutubeEmbed from '$lib/components/YoutubeEmbed.svelte';
-</script>
+  import Figures from '$lib/components/Figures.svelte';
 
-# About
+  import dolly from '$lib/images/traveling-at-home/dolly.png?srcset';
+  import set from '$lib/images/traveling-at-home/set.png?srcset';
+  import storyBoard from '$lib/images/traveling-at-home/story-board.png?srcset';
+  import streetview from '$lib/images/traveling-at-home/streetview.png?srcset';
+  import mocha from '$lib/images/traveling-at-home/mocha.png?srcset';
+  import tripod from '$lib/images/traveling-at-home/tripod.jpg?srcset';
+</script>
 
 ## What is this
 
@@ -32,7 +38,7 @@ home with.
 
 ## Viewing
 
-<YoutubeEmbed code="eW7nDUjvhd0" />
+<YoutubeEmbed code="sWxYY_RaUEw" />
 
 # What I did
 
@@ -43,6 +49,17 @@ manual/shutter speed priority modes keeping the 180 degrees shutter and higher d
 
 ### Dolly shots
 
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: dolly,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
+
 A custom rig was created to film the dolly-in and out shots of the physical computer monitor. My
 tripod is able to remove one of its legs and be combined with the center column, creating a monopod.
 With the monopod, I can combine 2 broomsticks to create a triangle shape with a smooth bottom for me
@@ -50,11 +67,33 @@ to slide on the top of my chair. The end of the monopod is extended for a water 
 for counterbalance. The shot coming out of this rig is still not perfect so a little bit more warp
 stabilizer is used to create a perfect dolly in and out.
 
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: set,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
+
 All images on the screen are static and detailed while filming to give enough information for later
 screen tracking and replacement. A random person's portrait is used for reliable continuous face
 detection autofocus.
 
 ### Walking shots
+
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: tripod,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>photo5154664808170236261-expand.jpg)
 
 To keep the walking shots smooth, the tripod is used just like a steady cam. With the hand on the
 center column, moving it up and down allows me to find the center of gravity and balance the rig.
@@ -66,11 +105,33 @@ camera still have some rotations in it, the harsh micro stakes and jitters are t
 
 ### Screen tracking
 
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: mocha,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
+
 I used Mocha AE to track the screen, transform it to corner pins and apply it to the screen capture
 comps. I needed to add blur, noise, and colour grading so the screen captures look in place and
 realistic.
 
 ### Google streetview footage
+
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: streetview,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
 
 A JavaScript site is made using the Google Streetview API. This interfaces with an auto hotkey
 script where it takes a screenshot every 3 seconds. The tilt of the camera is ways at 90 while the
@@ -85,6 +146,17 @@ are converted to Prores 422hq for better abilities to keep solid colours without
 artifacts.
 
 ## Story board
+
+<!-- prettier-ignore -->
+<Figures
+  images={[
+    {
+      srcset: storyBoard,
+      alt: '',
+      figCaption: ''
+    },
+  ]}
+/>
 
 A story board and mood board was created in Figma to guide the filming and editing of the film.
 

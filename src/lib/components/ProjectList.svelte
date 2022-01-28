@@ -33,7 +33,19 @@
 	}
 	figure {
 		margin: 0;
+		height: 300px;
+		position: relative;
+
+		figcaption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 0.25rem 1rem;
+			background-color: #000a;
+		}
 	}
+
 	a {
 		display: block;
 		background-color: #fff1;

@@ -35,6 +35,9 @@ const config = {
 		vite: {
 			plugins: [
 				imagetools({
+					defaultDirectives: (url) => {
+						return new URLSearchParams('w=300;500;750;1000&format=webp');
+					},
 					force: true
 				})
 			],

@@ -3,7 +3,7 @@ title: 'The Incandescent Enemy'
 ---
 
 <script context="module">
-  import img from "$lib/images/the-incandescent-enemy/the-incandescent-enemy.png?w=300;500;750;1000&format=webp&srcset";
+  import img from "$lib/images/the-incandescent-enemy/cover.png?srcset";
   export const cover = img;
 
   export function load() {
@@ -21,33 +21,29 @@ title: 'The Incandescent Enemy'
   import Image from "$lib/components/Image.svelte";
   import Figures from "$lib/components/Figures.svelte";
 
-  import char1 from "$lib/images/the-incandescent-enemy/char-1.png?w=300;500;750;1000&format=webp&srcset";
-  import char2 from "$lib/images/the-incandescent-enemy/char-2.png?w=300;500;750;1000&format=webp&srcset";
-  import face1 from "$lib/images/the-incandescent-enemy/face-1.png?w=300;500;750;1000&format=webp&srcset";
-  import face2 from "$lib/images/the-incandescent-enemy/face-2.png?w=300;500;750;1000&format=webp&srcset";
-  import face3 from "$lib/images/the-incandescent-enemy/face-3.png?w=300;500;750;1000&format=webp&srcset";
-  import face4 from "$lib/images/the-incandescent-enemy/face-4.png?w=300;500;750;1000&format=webp&srcset";
-  import hdr1 from "$lib/images/the-incandescent-enemy/hdr-1.png?w=300;500;750;1000&format=webp&srcset";
-  import noise1 from "$lib/images/the-incandescent-enemy/noise-1.png?w=300;500;750;1000&format=webp&srcset";
-  import noise2 from "$lib/images/the-incandescent-enemy/noise-2.png?w=300;500;750;1000&format=webp&srcset";
-  import noise3 from "$lib/images/the-incandescent-enemy/noise-3.png?w=300;500;750;1000&format=webp&srcset";
-  import road1 from "$lib/images/the-incandescent-enemy/road-1.png?w=300;500;750;1000&format=webp&srcset";
-  import road2 from "$lib/images/the-incandescent-enemy/road-2.png?w=300;500;750;1000&format=webp&srcset";
-  import road3 from "$lib/images/the-incandescent-enemy/road-3.png?w=300;500;750;1000&format=webp&srcset";
-  import terrain1 from "$lib/images/the-incandescent-enemy/terrain-1.jpg?w=300;500;750;1000&format=webp&srcset";
-  import terrain2 from "$lib/images/the-incandescent-enemy/terrain-2.png?w=300;500;750;1000&format=webp&srcset";
-  import vegetation1 from "$lib/images/the-incandescent-enemy/vegetation-1.png?w=300;500;750;1000&format=webp&srcset";
-  import vegetation2 from "$lib/images/the-incandescent-enemy/vegetation-2.png?w=300;500;750;1000&format=webp&srcset";
-  import vw1 from "$lib/images/the-incandescent-enemy/vw-1.jpg?w=300;500;750;1000&format=webp&srcset";
-  import vw2 from "$lib/images/the-incandescent-enemy/vw-2.jpg?w=300;500;750;1000&format=webp&srcset";
-  import vw3 from "$lib/images/the-incandescent-enemy/vw-3.jpg?w=300;500;750;1000&format=webp&srcset";
-  import vwUv from "$lib/images/the-incandescent-enemy/vw-uv.jpg?w=300;500;750;1000&format=webp&srcset";
+  import char1 from "$lib/images/the-incandescent-enemy/char-1.png?srcset";
+  import char2 from "$lib/images/the-incandescent-enemy/char-2.png?srcset";
+  import face1 from "$lib/images/the-incandescent-enemy/face-1.png?srcset";
+  import face2 from "$lib/images/the-incandescent-enemy/face-2.png?srcset";
+  import face3 from "$lib/images/the-incandescent-enemy/face-3.png?srcset";
+  import face4 from "$lib/images/the-incandescent-enemy/face-4.png?srcset";
+  import hdr1 from "$lib/images/the-incandescent-enemy/hdr-1.png?srcset";
+  import noise1 from "$lib/images/the-incandescent-enemy/noise-1.png?srcset";
+  import noise2 from "$lib/images/the-incandescent-enemy/noise-2.png?srcset";
+  import noise3 from "$lib/images/the-incandescent-enemy/noise-3.png?srcset";
+  import road1 from "$lib/images/the-incandescent-enemy/road-1.png?srcset";
+  import road2 from "$lib/images/the-incandescent-enemy/road-2.png?srcset";
+  import road3 from "$lib/images/the-incandescent-enemy/road-3.png?srcset";
+  import terrain1 from "$lib/images/the-incandescent-enemy/terrain-1.jpg?srcset";
+  import terrain2 from "$lib/images/the-incandescent-enemy/terrain-2.png?srcset";
+  import vegetation1 from "$lib/images/the-incandescent-enemy/vegetation-1.png?srcset";
+  import vegetation2 from "$lib/images/the-incandescent-enemy/vegetation-2.png?srcset";
+  import vw1 from "$lib/images/the-incandescent-enemy/vw-1.jpg?srcset";
+  import vw2 from "$lib/images/the-incandescent-enemy/vw-2.jpg?srcset";
+  import vw3 from "$lib/images/the-incandescent-enemy/vw-3.jpg?srcset";
+  import vwUv from "$lib/images/the-incandescent-enemy/vw-uv.jpg?srcset";
 
 </script>
-
-<Figures images={[{ srcset: cover, alt: 'thing' }]} wide={true}/>
-
-# {title}
 
 ## What is this
 

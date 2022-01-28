@@ -1,15 +1,14 @@
 <script lang="ts">
 	import '$lib/styles/_global.scss';
-	import { now } from 'svelte/internal';
 </script>
 
 <nav>
 	<div class="nav width">
 		<a href="/">DonnyWu</a>
 		<div class="spacer" />
-		<!-- <a href="/#contact">contact</a>
+		<a href="/#contact">contact</a>
 		<a href="/#about">about</a>
-		<a href="/#projects">projects</a> -->
+		<a href="/#projects">projects</a>
 	</div>
 </nav>
 
@@ -32,7 +31,6 @@
 		> * {
 			padding: 0.5rem $side-padding;
 		}
-		margin-bottom: 2rem;
 	}
 
 	.spacer {

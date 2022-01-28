@@ -8,4 +8,10 @@
 		.reverse()[0];
 </script>
 
-<img {srcset} {src} {alt} type="image/webp" sizes="100vw" loading="lazy"/>
+<img {srcset} {src} {alt} type="image/webp" sizes="100vw" loading="lazy" />
+
+<style>
+	img {
+		display: block;
+	}
+</style>
