@@ -1,9 +1,7 @@
 export type Project = {
 	path: string;
-	cover?: {
-		src: string;
-		srcset: string;
-	};
+	cover?: string;
+
 	metadata: {
 		title?: string;
 		description?: string;

@@ -8,7 +8,7 @@
 	{#each projects as project}
 		<a href={project.path}>
 			<figure>
-				<Image srcset={project.cover.srcset} />
+				<Image srcset={project.cover} />
 				<figcaption>
 					{#if project.metadata.title}
 						<p>{project.metadata.title}</p>
