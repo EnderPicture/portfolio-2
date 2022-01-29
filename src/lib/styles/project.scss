@@ -7,22 +7,28 @@ p {
 .hero {
   width: 100vw;
   margin-left: calc(calc(100% - 100vw) / 2);
-  height: 100vh;
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: stretch;
-  margin-bottom: -100vh;
+  height: 130vh;
+  margin-bottom: -130vh;
   z-index: -1;
-  mask-image: linear-gradient(to bottom, #000f 80%, #0000);
-  -webkit-mask-image: linear-gradient(to bottom, #000f 80%, #0000);
+  mask-image: linear-gradient(to bottom, #000f 70%, #0000);
+  -webkit-mask-image: linear-gradient(to bottom, #000f 70%, #0000);
 
   > img {
-  	filter: blur(30px) brightness(0.8);
+    transform: scale(1.2);
+  	filter: blur(30px) brightness(0.75);
   	object-fit: cover;
   }
 }
 .cover {
   overflow: hidden;
   border-radius: $border-radius;
+  @include wide-width;
+  > img {
+    height: 40vh;
+    min-height: 30rem;
+  }
 }

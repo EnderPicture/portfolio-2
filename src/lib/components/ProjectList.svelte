@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Project } from '$lib/types';
+	import Image from './Image.svelte';
 	export let projects: Project[] = [];
 </script>
 
@@ -7,7 +8,7 @@
 	{#each projects as project}
 		<a href={project.path}>
 			<figure>
-				<img src={project.cover.src} sizes="33vw" srcset={project.cover.srcset} alt="" />
+				<Image srcset={project.cover.srcset} />
 				<figcaption>
 					{#if project.metadata.title}
 						<p>{project.metadata.title}</p>
@@ -28,13 +29,31 @@
 		gap: 1rem;
 		grid-template-columns: repeat(3, 1fr);
 	}
-	img {
-		display: block;
-	}
+
 	figure {
 		margin: 0;
-		height: 300px;
+		height: 0px;
+		padding-bottom: 56.25%;
 		position: relative;
+
+		:global(img) {
+			transition: transform 0.5s ease;
+		}
+		&:hover {
+			:global(img) {
+				transform: scale(1.05);
+				transition: transform 0.2s ease;
+			}
+		}
+
+		:global(img) {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 
 		figcaption {
 			position: absolute;

@@ -36,7 +36,7 @@ const config = {
 			plugins: [
 				imagetools({
 					defaultDirectives: (url) => {
-						return new URLSearchParams('w=300;500;750;1000&format=webp');
+						return new URLSearchParams('w=300;500;750;1000;1500&format=webp');
 					},
 					force: true
 				})

@@ -1,11 +1,7 @@
 <script lang="ts">
 	import Image from '$lib/components/Image.svelte';
-
-	type FigureImage = {
-		figCaption?: string;
-		alt?: string;
-		srcset: string;
-	};
+	import type { FigureImage } from '$lib/types';
+	import Figure from './Figure.svelte';
 
 	export let images: FigureImage[] = [];
 	export let wide: boolean = images.length > 2;
@@ -13,30 +9,11 @@
 
 <div class="figures" class:wide style={`--count: ${images.length}`}>
 	{#each images as img}
-		<figure>
-			<Image alt={img.alt ?? ''} srcset={img.srcset} />
-			{#if img.figCaption}
-				<figcaption>{img.figCaption}</figcaption>
-			{/if}
-		</figure>
+		<Figure {img} />
 	{/each}
 </div>
 
 <style lang="scss">
-	figure {
-		margin: 0;
-		position: relative;
-		border-radius: $border-radius;
-		overflow: hidden;
-	}
-	figcaption {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		padding: 0.25rem 1rem;
-		background-color: #000a;
-	}
 	.wide {
 		@include wide-width;
 	}

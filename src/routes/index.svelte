@@ -61,11 +61,18 @@
 	<ProjectList {projects} />
 	<section id="contact">
 		<h2>contact</h2>
+		<a href="">Instagram</a>
+		<a href="">Github</a>
+		<a href="">LinkedIn</a>
 	</section>
 </section>
 
 <style lang="scss">
 	p {
 		@include read-width;
+	}
+
+	#projects {
+		margin-bottom: 10rem;
 	}
 </style>

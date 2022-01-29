@@ -9,3 +9,9 @@ export type Project = {
 		description?: string;
 	};
 };
+
+export type FigureImage = {
+	figCaption?: string;
+	alt?: string;
+	srcset: string;
+};

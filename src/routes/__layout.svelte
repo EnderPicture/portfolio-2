@@ -4,7 +4,7 @@
 
 <nav>
 	<div class="nav width">
-		<a href="/">DonnyWu</a>
+		<a class="home" href="/">DonnyWu</a>
 		<div class="spacer" />
 		<a href="/#contact">contact</a>
 		<a href="/#about">about</a>
@@ -30,6 +30,12 @@
 		padding: 0;
 		> * {
 			padding: 0.5rem $side-padding;
+		}
+		a {
+			text-decoration: none;
+		}
+		.home {
+			font-weight: 900;
 		}
 	}
 

@@ -6,17 +6,10 @@ title: 'The Incandescent Enemy'
   import img from "$lib/images/the-incandescent-enemy/cover.png?srcset";
   export const cover = img;
 
-  export function load() {
-    return {
-      props: {
-        cover: cover
-      }
-    }
-  }
+  export const load = () => ({props: {cover: cover}});
 </script>
 
 <script>
-  export let cover;
   import YoutubeEmbed from "$lib/components/YoutubeEmbed.svelte";
   import Image from "$lib/components/Image.svelte";
   import Figures from "$lib/components/Figures.svelte";
@@ -266,7 +259,7 @@ despite Arnold GPU. AOVs were rendered but they did not help that much as they a
 <Figures
   images={[
     {
-      srcset: noise1,
+      srcset: noise2,
       alt: 'An example of the noisy output image',
       figCaption: 'noisy output image'
     },
@@ -276,7 +269,7 @@ despite Arnold GPU. AOVs were rendered but they did not help that much as they a
       figCaption: 'terminal running Open Image Denoise'
     },
     {
-      srcset: noise2,
+      srcset: noise1,
       alt: 'An example of the same frame but denoised by Open Image Denoise',
       figCaption: 'the same frame but denoised by Open Image Denoise'
     },

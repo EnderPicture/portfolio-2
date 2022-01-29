@@ -6,13 +6,7 @@ title: 'Traveling at Home'
   import img from '$lib/images/traveling-at-home/cover.png?srcset';
   export const cover = img;
 
-  export function load() {
-    return {
-      props: {
-        cover: cover
-      }
-    }
-  }
+  export const load = () => ({props: {cover: cover}});
 </script>
 
 <script>
