@@ -8,7 +8,7 @@ export async function get() {
 
 		projects.push({
 			cover: cover,
-			path: path.replace(/(\/src\/routes\/)|(\.md)/g, ''),
+			path: path.replace(/(\/src\/routes\/)|(\.md)/g, '')+'/',
 			metadata: metadata
 		});
 	}
