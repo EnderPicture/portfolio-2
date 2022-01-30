@@ -1,18 +1,14 @@
 <script lang="ts" context="module">
 	import type { Project } from '$lib/types';
 
-	export async function load() {
+	export async function load({ fetch }) {
 		let projects: Project[] = [];
-		const allProjects = import.meta.glob('/src/routes/projects/*.md');
-		for (let path in allProjects) {
-			const { metadata, cover } = await allProjects[path]();
 
-			projects.push({
-				cover: cover,
-				path: path.replace(/(\/src\/routes\/)|(\.md)/g, ''),
-				metadata: metadata
-			});
+		const res = await fetch('/api/projects');
+		if (res.ok) {
+			projects = await res.json();
 		}
+
 		return {
 			props: {
 				projects: projects
@@ -71,7 +67,7 @@
 		a {
 			display: inline-block;
 			text-decoration: none;
-			padding: .5rem 1rem;
+			padding: 0.5rem 1rem;
 			transition: 0.5s ease;
 			margin: 0;
 			&:hover {

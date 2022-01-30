@@ -1,34 +1,50 @@
 @import '_variables';
 
+* {
+  color: red;
+}
+
 p {
-  max-width: $read-width;
+	max-width: $read-width;
+}
+
+a {
+	transition: opacity 0.5s ease;
+	&:hover {
+		transition: opacity 0.1s ease;
+		opacity: 0.75;
+	}
+	&:active {
+		transition: opacity 0.1s ease;
+		opacity: 0.5;
+	}
 }
 
 .hero {
-  width: 100vw;
-  margin-left: calc(calc(100% - 100vw) / 2);
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: stretch;
-  height: 130vh;
-  margin-bottom: -130vh;
-  z-index: -1;
-  mask-image: linear-gradient(to bottom, #000f 70%, #0000);
-  -webkit-mask-image: linear-gradient(to bottom, #000f 70%, #0000);
+	width: 100vw;
+	margin-left: calc(calc(100% - 100vw) / 2);
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	height: 130vh;
+	margin-bottom: -130vh;
+	z-index: -1;
+	mask-image: linear-gradient(to bottom, #000f 70%, #0000);
+	-webkit-mask-image: linear-gradient(to bottom, #000f 70%, #0000);
 
-  > img {
-    transform: scale(1.2);
-  	filter: blur(30px) brightness(0.75);
-  	object-fit: cover;
-  }
+	> img {
+		transform: scale(1.2);
+		filter: blur(30px) brightness(0.75);
+		object-fit: cover;
+	}
 }
 .cover {
-  overflow: hidden;
-  border-radius: $border-radius;
-  @include wide-width;
-  > img {
-    height: 40vh;
-    min-height: 10rem;
-  }
+	overflow: hidden;
+	border-radius: $border-radius;
+	@include wide-width;
+	> img {
+		height: 40vh;
+		min-height: 10rem;
+	}
 }

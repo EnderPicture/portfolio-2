@@ -26,9 +26,6 @@
 	nav {
 		background-color: #000;
 		max-width: initial;
-		// position: sticky;
-		// top: 0;
-		// z-index: 20;
 	}
 	.links {
 		display: flex;
@@ -70,6 +67,10 @@
 		text-decoration: none;
 		&:hover::before {
 			opacity: 0.1;
+			transition: opacity 0.2s ease;
+		}
+		&:active::before {
+			opacity: 0.25;
 			transition: opacity 0.2s ease;
 		}
 	}
