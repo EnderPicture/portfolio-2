@@ -20,13 +20,13 @@ const config = {
 	],
 
 	kit: {
-		// trailingSlash: 'always',
+		trailingSlash: 'ignore',
 		adapter: adapter({
 			// default options are shown
 			pages: 'build',
 			assets: 'build',
 			fallback: null,
-			precompress: true
+			// precompress: true
 		}),
 
 		// hydrate the <div id="svelte"> element in src/app.html
