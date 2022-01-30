@@ -71,7 +71,7 @@
 		a {
 			display: inline-block;
 			text-decoration: none;
-			padding: 1rem;
+			padding: .5rem 1rem;
 			transition: 0.5s ease;
 			margin: 0;
 			&:hover {
