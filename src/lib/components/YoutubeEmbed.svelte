@@ -8,12 +8,12 @@
 	<div class="aspect" class:aspect-16-9={aspect === '16/9'} class:aspect-12-5={aspect === '12/5'}>
 		{#if hidden}
 			<div class="placeholder">
-				<img class="" src={`https://img.youtube.com/vi/${code}/0.jpg`} alt="" />
+				<img src={`https://img.youtube.com/vi/${code}/0.jpg`} alt="" />
 				<button on:click={() => (hidden = false)}><span>▶</span></button>
 			</div>
 		{:else}
 			<iframe
-				src={`https://www.youtube.com/embed/${code}?autoplay=1`}
+				src={`https://www.youtube.com/embed/${code}?autoplay=1&modestbranding=1`}
 				title="YouTube video player"
 				frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

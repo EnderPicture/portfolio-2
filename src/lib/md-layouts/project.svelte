@@ -10,7 +10,7 @@
 </svelte:head>
 
 <header>
-	<div class="hero">
+	<div class="hero" aria-hidden="true">
 		<Image srcset={cover} />
 	</div>
 	<h1>{title}</h1>
