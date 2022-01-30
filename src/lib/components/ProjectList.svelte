@@ -28,6 +28,12 @@
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: $double-break) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $single-break) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 
 	figure {

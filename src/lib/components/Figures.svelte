@@ -20,8 +20,14 @@
 	.figures {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(var(--count), 1fr);
 		margin-bottom: 1rem;
 		align-items: end;
+		grid-template-columns: repeat(min(var(--count), 3), 1fr);
+		@media (max-width: $double-break) {
+			grid-template-columns: repeat(min(var(--count), 2), 1fr);
+		}
+		@media (max-width: $single-break) {
+			grid-template-columns: repeat(min(var(--count), 1), 1fr);
+		}
 	}
 </style>

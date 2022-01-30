@@ -6,6 +6,10 @@ $read-width: 30rem;
 $side-padding: 2rem;
 $border-radius: 0.5rem;
 
+$tablet-break: 600px;
+$double-break: 1500px;
+$single-break: 700px;
+
 @mixin width {
 	width: 100%;
 	max-width: $width;

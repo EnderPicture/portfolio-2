@@ -87,7 +87,7 @@ detection autofocus.
       figCaption: ''
     },
   ]}
-/>photo5154664808170236261-expand.jpg)
+/>
 
 To keep the walking shots smooth, the tripod is used just like a steady cam. With the hand on the
 center column, moving it up and down allows me to find the center of gravity and balance the rig.
@@ -165,5 +165,3 @@ A story board and mood board was created in Figma to guide the filming and editi
 - [Google Earth Studio](https://www.google.com/earth/studio/)
 - [JS Fiddle](https://jsfiddle.net/)
 - [Figma](https://www.figma.com/)
-
-# References

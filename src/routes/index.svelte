@@ -50,7 +50,7 @@
 		<h2>contact</h2>
 		<div class="links">
 			<a href="mailto:donny@donnywu.com">Email</a>
-			<a href="https://github.com/EnderPicture">Github</a>
+			<a href="https://github.com/EnderPicture">GitHub</a>
 			<a href="https://www.linkedin.com/in/donny-wu-4b848b87/">LinkedIn</a>
 			<a href="https://www.instagram.com/_donny_wu/">Instagram</a>
 		</div>
