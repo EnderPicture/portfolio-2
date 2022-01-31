@@ -10,8 +10,8 @@
 			{#each word as char}
 				<span class="char" style={`--delay: ${char.index / 20 + 1}s`}>{char.char}</span>
 			{/each}
-			<span class="char" />
 		</span>
+		<span>{' '}</span>
 	{/each}
 	<span />
 </h1>
