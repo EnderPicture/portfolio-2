@@ -8,7 +8,9 @@
 	{#each projects as project}
 		<a href={project.path}>
 			<figure>
-				<Image srcset={project.cover} alt={`an image tumbnail of ${project.metadata.title}`} />
+				<div class="img">
+					<Image srcset={project.cover} alt={`an image tumbnail of ${project.metadata.title}`} />
+				</div>
 				<figcaption>
 					{#if project.metadata.title}
 						<p>{project.metadata.title}</p>
@@ -44,12 +46,19 @@
 	}
 
 	figure {
+		height: 100%;
 		margin: 0;
-		height: 0px;
-		padding-bottom: 61.8%;
-		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		.img {
+			overflow: hidden;
+			flex: 1;
+		}
 
 		:global(img) {
+			width: 100%;
+			height: 100%;
 			transition: transform 0.5s ease;
 		}
 		&:hover {
@@ -59,20 +68,7 @@
 			}
 		}
 
-		:global(img) {
-			display: block;
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-
 		figcaption {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
 			padding: 0.25rem 1rem;
 			background-color: #000a;
 		}
