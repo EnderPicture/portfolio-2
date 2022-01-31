@@ -5,6 +5,7 @@ export type Project = {
 	metadata: {
 		title?: string;
 		description?: string;
+		tags?: string[];
 	};
 };
 

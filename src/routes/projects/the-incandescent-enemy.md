@@ -1,5 +1,12 @@
 ---
 title: 'The Incandescent Enemy'
+description:
+  A 3D animated film created from scratch using Maya, Arnold GPU, Substance Painter, NASA Imagery,
+  and Many other tools.
+tags:
+  - Team
+  - Film
+  - 3D Modeling
 ---
 
 <script context="module">

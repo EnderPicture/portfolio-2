@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Contact from '$lib/components/Contact.svelte';
 	import '$lib/styles/_global.scss';
 </script>
 
@@ -7,9 +8,9 @@
 		<a class="home" href="/">DonnyWu</a>
 		<div class="spacer" />
 		<div class="links">
-			<a href="/#contact">contact</a>
 			<a href="/#about">about</a>
 			<a href="/#projects">projects</a>
+			<a href="#contact">contact</a>
 		</div>
 	</div>
 </nav>
@@ -19,6 +20,7 @@
 </main>
 
 <footer class="width">
+	<Contact />
 	<p>Copyright Donny Wu {new Date().getFullYear()}</p>
 </footer>
 

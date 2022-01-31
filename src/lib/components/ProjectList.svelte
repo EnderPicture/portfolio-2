@@ -14,7 +14,14 @@
 						<p>{project.metadata.title}</p>
 					{/if}
 					{#if project.metadata.description}
-						<p>{project.metadata.description}</p>
+						<p class="desc">{project.metadata.description}</p>
+					{/if}
+					{#if project.metadata.tags}
+						<p class="tags">
+							{#each project.metadata.tags as tag}
+								<span>{tag}</span>
+							{/each}
+						</p>
 					{/if}
 				</figcaption>
 			</figure>
@@ -39,7 +46,7 @@
 	figure {
 		margin: 0;
 		height: 0px;
-		padding-bottom: 56.25%;
+		padding-bottom: 61.8%;
 		position: relative;
 
 		:global(img) {
@@ -79,8 +86,25 @@
 		text-decoration: none;
 	}
 	p {
-		padding: 0.5rem 1rem;
+		// padding: 0.5rem 1rem;
 		margin: 0;
 		font-weight: 900;
+		& + * {
+			margin-top: 0.5rem;
+		}
+	}
+	.desc {
+		font-weight: initial;
+		line-height: 1;
+	}
+	.tags {
+		display: flex;
+		font-weight: initial;
+		margin-right: -0.5rem;
+		margin-left: -0.5rem;
+		span {
+			display: block;
+			padding: 0.1rem 0.5rem;
+		}
 	}
 </style>

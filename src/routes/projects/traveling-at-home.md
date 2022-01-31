@@ -1,5 +1,9 @@
 ---
 title: 'Traveling at Home'
+tags:
+  - Individual
+  - Development
+  - Film
 ---
 
 <script context="module">
