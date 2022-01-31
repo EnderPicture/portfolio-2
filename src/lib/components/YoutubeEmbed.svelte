@@ -9,7 +9,11 @@
 		{#if hidden}
 			<div class="placeholder">
 				<img src={`https://img.youtube.com/vi/${code}/0.jpg`} alt="" />
-				<button on:click={() => (hidden = false)}><span>▶</span></button>
+				<button on:click={() => (hidden = false)}>
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 520 600">
+						<polygon points="0,300 520,600 520,0" fill="#000000" />
+					</svg>
+				</button>
 			</div>
 		{:else}
 			<iframe
@@ -53,8 +57,11 @@
 					transition: opacity 0.1s ease;
 					opacity: 0.5;
 				}
-				span {
-					transform: translateX(0.1em);
+				svg {
+					margin: 0;
+					width: 40%;
+					height: 40%;
+					transform: translateX(0.1em) rotate(180deg);
 				}
 			}
 		}

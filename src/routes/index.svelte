@@ -19,14 +19,20 @@
 
 <script lang="ts">
 	export let projects: Project[] = [];
+	import AnimatedHeader from '$lib/components/AnimatedHeader.svelte';
 	import ProjectList from '$lib/components/ProjectList.svelte';
 </script>
 
 <svelte:head>
 	<title>Donny's portfolio</title>
+	<meta
+		name="description"
+		content="Donny's portfolio containing many intresting projects from many disciplines"
+	/>
 </svelte:head>
 
-<h1>Donny's playground</h1>
+<AnimatedHeader text="Donny's Playground" />
+<!-- <h1>Donny's playground</h1> -->
 
 <section id="about">
 	<h2>Who am I?</h2>
