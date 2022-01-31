@@ -46,13 +46,14 @@
 	<h2>My projects</h2>
 	<ProjectList {projects} />
 </section>
+<section id="projects">
+	<h2>More works</h2>
+	<p>A place where I put WIP project reports</p>
+	<a href="https://wiki.donnywu.com/">Donny Wu's Wiki</a>
+</section>
 
 <style lang="scss">
 	p {
 		@include read-width;
-	}
-
-	#projects {
-		margin-bottom: 10rem;
 	}
 </style>
